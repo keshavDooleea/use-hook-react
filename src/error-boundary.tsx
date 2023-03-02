@@ -20,7 +20,7 @@ class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
-  public render() {
+  public render(): ReactElement | undefined {
     if (this.state.hasError) {
       return this.state.error ? (
         <p>Erreur: {this.state.error}</p>
